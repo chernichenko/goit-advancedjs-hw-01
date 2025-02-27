@@ -28,5 +28,6 @@ form.addEventListener("submit", (event) => {
     console.log(formData);
     localStorage.removeItem("feedback-form-state");
     form.reset();
+    Object.keys(formData).forEach((key) => (formData[key] = ""));
   }
 });
